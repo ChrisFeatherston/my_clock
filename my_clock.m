@@ -19,7 +19,7 @@ h = plot(xunit,yunit,'k');
 r=8.5; 
 num=1; 
 tb = uicontrol(f, 'Style', 'togglebutton', 'String', 'Kill');
-pause(1)
+pause(0.5)
 
 %% Add the numbers
 for th = pi/6: pi/6: 2*pi
@@ -64,7 +64,7 @@ ytemp2 = 7 * cos(theta2);
 Y2 = [0 ytemp2]; 
 xtemp2 = 7 * sin(theta2); 
 X2 = [0 xtemp2];
-p2=plot(X2,Y2,'k'); %draw second hand
+p2=plot(X2,Y2); %draw second hand
 pause(1);
 if (get(tb, 'Value')==1); break; end
 delete(p2);
